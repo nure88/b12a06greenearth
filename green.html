@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Green Earth - Plant a Tree</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-inner m-auto">
+        <div class="brand">Green Earth</div>
+        <nav class="nav-links">
+          <a href="#" class="active">Home</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="cta">
+          <button id="plantBtn" class="btn primary">Plant a Tree</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <div class="md:grid md:grid-cols-3 flex flex-wrap items-center">
+        <!-- placeholder leaves -->
+        <img src="./B12A06-Green-Earth/assets/hero-leaf1.png" alt="" class="bg-fixed" />
+        <div class="text-center m-auto z-20">
+          <h1>Plant a Tree, Grow a Future</h1>
+          <p>
+            Join our mission to plant trees and make the Earth greener for
+            future generations.
+          </p>
+          <button class="btn accent mb-2" id="hero-cta">Get Involved</button>
+        </div>
+        <img src="./B12A06-Green-Earth/assets/hero-leaf2.png" alt="" class="md:block hidden" />
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="m-auto mt-20">
+      <h2 class="section-title font-semibold">Choose Your Trees</h2>
+      <div class="main-grid">
+        <aside class="sidebar">
+          <h3 class="text-lg font-semibold">Categories</h3>
+          <div id="categories" class="categories">
+            <!-- categories will load here -->
+          </div>
+        </aside>
+
+        <section class="products-section">
+          <div id="spinner" class="spinner hide"></div>
+          <div id="product-grid">
+            <!-- product cards -->
+          </div>
+        </section>
+
+        <aside class="cart">
+          <h3>Your Cart</h3>
+          <div id="cart-list" class="cart-list">
+            <p class="empty">Cart is empty</p>
+          </div>
+          <div class="cart-total">
+            <div>Total: $<span id="cart-total">0</span></div>
+            <button id="checkout" class="btn primary full">Checkout</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ABOUT -->
+    <section id="about" class="md:container w-full px-5 m-auto mt-20">
+      <h3 class="text-2xl font-semibold text-center">About the Campaign</h3>
+      <div class="grid md:grid-cols-2 items-center mt-10">
+        <img src="./B12A06-Green-Earth/assets/about.png" alt="campaign image" />
+        <!-- <div class="about-image placeholder-box">
+        </div> -->
+        <div class="flex-1 pl-2 space-y-5">
+          <p>
+            Green Earth is a global tree plantation initiative dedicated to
+            fighting climate change. Since our start, we’ve planted over 500,000
+            trees worldwide. By joining our campaign, you help restore forests,
+            create habitats for wildlife, and combat global warming.
+          </p>
+          <ul class="list-disc">
+            <li>Plant trees to restore habitats</li>
+            <li>Support local communities</li>
+            <li>Reduce carbon footprint</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="m-auto mt-20 py-20 bg-(--green-200)">
+      <h3 class="text-2xl font-semibold text-center">Our Impact</h3>
+      <div
+        class="md:container w-full px-5 m-auto grid md:grid-cols-3 gap-8 items-center justify-center mt-10"
+      >
+        <div class="impact-card">
+          <strong>500K+</strong><span>Trees Planted</span>
+        </div>
+        <div class="impact-card">
+          <strong>120+</strong><span>Communities Helped</span>
+        </div>
+        <div class="impact-card">
+          <strong>30+</strong><span>Countries Reached</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer bg-[#166534]">
+      <div class="md:container w-full px-5 m-auto footer-inner">
+        <!-- FORM & FOOTER -->
+        <section class="w-96 m-auto py-10">
+          <h3 class="text-2xl text-center">Plant a Tree Today</h3>
+          <form
+            id="plant-form"
+            class="plant-form mt-10 p-10 bg-(--green-500) rounded-lg shadow-md"
+          >
+            <input
+              type="text"
+              id="donor-name"
+              placeholder="Your Name"
+              required
+            />
+            <input
+              type="email"
+              id="donor-email"
+              placeholder="Your Email Address"
+              required
+            />
+            <input
+              type="number"
+              id="donor-count"
+              placeholder="Number of Trees"
+              min="1"
+              value="1"
+              required
+            />
+            <button class="btn accent" type="submit">Donate Now</button>
+          </form>
+        </section>
+      </div>
+      <div class="text-center p-5 bg-[#14532D]">
+        © 2025 Green Earth. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hide" role="dialog" aria-hidden="true">
+      <div class="modal-inner">
+        <button id="modal-close" class="modal-close" aria-label="Close">
+          ✕
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
