@@ -338,6 +338,7 @@ body {
     display: none;
   }
 }
+             
 @media (max-width: 520px) {
   .product-grid {
     grid-template-columns: 1fr;
