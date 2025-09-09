@@ -227,7 +227,7 @@
     cartList.appendChild(ul);
     cartTotalEl.textContent = formatPrice(total);
   }
-
+       
   // add to cart logic
   function addToCart({ id, name, price }) {
     if (!id) {
