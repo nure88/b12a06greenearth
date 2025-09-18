@@ -3,7 +3,7 @@
 This is a vanilla HTML/CSS/JavaScript project built to satisfy the Assignment-006 requirements.
 
 ## How to run
-1. Unzip the project folder.
+1.
 2. Open `index.html` in the browser.
 3. The app will fetch categories and plants from the public API:
    - https://openapi.programming-hero.com/api/categories

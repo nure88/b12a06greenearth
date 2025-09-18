@@ -1,3 +1,15 @@
+/* shared style */
+
+.inter-family{
+  font-family: "Inter", sans-serif;
+}
+
+
+
+
+
+
+
 :root {
   --green-500: #0b7a3b;
   --green-200: #bff0c9;
@@ -263,7 +275,14 @@ body {
   color: #fff;
   padding: 18px 0 0;
 }
-
+.footer-inner {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+.footer-col h4 {
+  margin: 0 0 8px;
+}
 .pay {
   display: inline-block;
   padding: 6px 8px;
@@ -338,7 +357,6 @@ body {
     display: none;
   }
 }
-             
 @media (max-width: 520px) {
   .product-grid {
     grid-template-columns: 1fr;
